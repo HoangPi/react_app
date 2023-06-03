@@ -4,22 +4,20 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Job salary = {21001} position = "Intern" company = "FPT"/>
+      <Job salary = {60000} position = "Director" company = "FPT"/>
+      <Job salary = {20000} position = "Intern" company = "FPT"/>
     </div>
   );
 }
-
+const Job = (props) =>
+{
+  return (
+    <div>
+      <h1>{props.salary}</h1>
+      <h1>{props.position}</h1>
+      <h1>{props.company}</h1>
+    </div>
+  );
+}
 export default App;
