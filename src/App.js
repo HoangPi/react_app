@@ -1,23 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {useState} from "react"
 function App() {
+    const [changeColor, setColor] = useState("black");
   return (
     <div className="App">
-      <Job salary = {21001} position = "Intern" company = "FPT"/>
-      <Job salary = {60000} position = "Director" company = "FPT"/>
-      <Job salary = {20000} position = "Intern" company = "FPT"/>
+        <button onClick={()=>{setColor(changeColor === "red" ? "black": "red")}}>Show/Hide</button>
+        <h1 style={{color : changeColor}}>My name</h1>
     </div>
   );
 }
-const Job = (props) =>
-{
-  return (
-    <div>
-      <h1>{props.salary}</h1>
-      <h1>{props.position}</h1>
-      <h1>{props.company}</h1>
-    </div>
-  );
-}
+
 export default App;
